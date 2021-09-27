@@ -1,0 +1,6 @@
+[submodule "L4-Project-Record-Repo"]
+	path = L4-Project-Record-Repo
+	url = https://github.com/2359451d/L4-Project-Record-Repo
+[submodule "L4-Source-Repo"]
+	path = L4-Source-Repo
+	url = https://github.com/2359451d/L4-Source-Repo
