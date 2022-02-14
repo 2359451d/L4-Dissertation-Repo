@@ -1,33 +1,35 @@
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
 
 \documentclass{l4proj}
-
     
 %
 % put any additional packages here
 %
+\usepackage{outlines} % make item list (convenient than itemize)
 \usepackage{csquotes} % better bibtex
 
 \begin{document}
 
 %==============================================================================
 %% METADATA
-\title{Level 4 Project Report Template}
-\author{John H. Williamson}
-\date{September 14, 2018}
+\title{Pascal Compiler: Create A Programming Language for the JVM}
+\author{Yao Du}
+\date{February 7, 2022}
 
 \maketitle
 
 %==============================================================================
 %% ABSTRACT
 \begin{abstract}
-    TEST TEST assignment
+    \textbf{TBC, Filled in finalization part}
+
     Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
     \vskip 0.5em
     ``XYZ is bad. This project investigated ABC to determine if it was better. 
     ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
     never been used together. It was found that  
     ABC was 20\% better than XYZ, though it caused rabies in half of subjects.''
+    
 \end{abstract}
 
 %==============================================================================
@@ -41,8 +43,8 @@
 % Please note that you are under no obligation to sign 
 % this declaration, but doing so would help future students.
 %
-%\def\consentname {My Name} % your full name
-%\def\consentdate {20 March 2018} % the date you agree
+\def\consentname {Yao Du} % your full name
+\def\consentdate {14 February 2022} % the date you agree
 %
 \educationalconsent
 
@@ -82,12 +84,12 @@
 
 
 Why should the reader care about what are you doing and what are you actually doing?
-\section{Guidance}
+\section{Motivation}
 
 \textbf{Motivate} first, then state the general problem clearly. 
 
-\section{Writing guidance}
-\subsection{Who is the reader?}
+\section{Goals}
+% \subsection{Who is the reader?}
 
 This is the key question for any writing. Your reader:
 
@@ -113,7 +115,7 @@ Remember, you will be marked by your supervisor and one or more members
 of staff. You might also have your project read by a prize-awarding
 committee or possibly a future employer. Bear that in mind.
 
-\subsection{References and style guides}
+% \subsection{References and style guides}
 There are many style guides on good English writing. You don't need to
 read these, but they will improve how you write.
 
@@ -137,16 +139,15 @@ read these, but they will improve how you write.
     \emph{The Sense of Style} \cite{pinker_sense_2015} Excellent, though quite in-depth.
 \end{itemize}
 
-\subsubsection{Citation styles}
+% \subsubsection{Citation styles}
 
 \begin{itemize}
 \item If you are referring to a reference as a noun, then cite it as: ``\citet{orwell_politics_1968} discusses the role of language in political thought.''
 \item If you are referring implicitly to references, use: ``There are many good books on writing \citep{orwell_politics_1968,williams_style_2009,pinker_sense_2015}.''
 \end{itemize}
-\subsection{Plagiarism warning}
+% \subsection{Plagiarism warning}
 
 \begin{highlight_title}{WARNING}
-    
     If you include material from other sources without full and correct attribution, you are commiting plagiarism. The penalties for plagiarism are severe.
     Quote any included text and cite it correctly. Cite all images, figures, etc. clearly in the caption of the figure.
 \end{highlight_title}
@@ -155,7 +156,42 @@ read these, but they will improve how you write.
 %==================================================================================================================================
 \chapter{Background}
 What did other people do, and how is it relevant to what you want to do?
-\section{Guidance}
+
+\section{Compiler Structure}
+\subsection{Three-Stage Architecture}
+\subsection{Two-Stage Architecture}
+
+\section{Virtual Machine Concepts}
+\subsection{Java Virtual Machine}
+
+\section{Memory Management (Not too sure whether removed if pointer types not done)}
+\subsection{Manual Management}
+\subsection{Garbage Collection}
+
+\section{Pascal}
+\subsection{Language Features}
+Give Pascal Features
+\begin{itemize}
+    \item common Features
+    \item special constructs(\textbf{should mention constructs that not implemented in all the stages?})
+    \subitem subranges
+  
+\end{itemize}
+* common Features
+* special constructs   * subranges
+    * enumerated types
+    * nested procedrue, function declaration
+\begin{outline}
+    \1 Top level item
+    \2 Sub item
+    \3 sub sub item
+\end{outline}
+
+\subsection{Existing Pascal Compilers}
+
+Free Pascal, Pascal-P(intermediate p code)
+
+% \section{Guidance}
 \begin{itemize}    
     \item
       Don't give a laundry list of references.
@@ -172,30 +208,107 @@ What did other people do, and how is it relevant to what you want to do?
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
 What is the problem that you want to solve, and how did you arrive at it?
+
+i.e. HOW TO MAKE A COMPILER?
+
+\begin{outline}
+    \1 Syntatic Analysis
+    \2 parser, lexer (regardless of the framework chosen, how to implement?)
+
+    \1 Contextual Analysis
+    \2 Analyse for each type of constructs
+    \3 control flow, expression(operator), how to check (\textbf{statement abstraction})
+
+    \1 Code Generation
+    \2 JVM instruction abstraction for typical constructs?
+    \3 expression (operand op operand) => operand operand <instruction>
+\end{outline}
+
+How to Test (applicability)
+
+% \begin{itemize}
+%     \item Syntatic Analysis
+%     \begin{itemize}
+%         \item parser
+%     \end{itemize}
+%     \item 
+% \end{itemize}
+
 \section{Guidance}
 Make it clear how you derived the constrained form of your problem via a clear and logical process. 
 
 %==================================================================================================================================
 \chapter{Design}
-How is this problem to be approached, without reference to specific implementation details? 
-\section{Guidance}
-Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool.
+% How is this problem to be approached, without reference to specific implementation details? 
+% Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool. 
+
+
+% \section{Syntactic Analysis}
+
+\section{Grammar(Might Not cover)}
+Expand concepts of EBNF rule to describe the grammar of programming languages.
+
+\section{Type Checking}
+% First briefly give concepts of Contextual analysis
+
+give concepts of Contextual analysis?
+
+how to conduct type checking in general phase?
+
+\section{Table Design}
+\section{Type Descriptor}
+% \subsection{Control Flow Structure}
+% Using code templates to describe behaviors
+
+\section{Instruction Abstraction}
+
+\section{Visitors}
+\subsection{Type Checker}
+\subsection{Bytecode Generator}
+% \section{Code Generation}
+\section{Compiler Driver}
+3 stages check
+
+\section{Technologies}
+\subsection{Java}
+\subsection{Antlr}
+\subsection{ASM}
+
 
 %==================================================================================================================================
 \chapter{Implementation}
-What did you do to implement this idea, and what technical achievements did you make?
-\section{Guidance}
-You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
+% What did you do to implement this idea, and what technical achievements did you make?
+% \section{Guidance}
+% You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
+
+\section{Syntactic Analysis}
+
+lexer parser
+
+\section{Contextual Analysis}
+% \subsection{}
+
+\section{Code Generation}
+Implementation involved using ASM frameworks, which provide API to organize/generate a class file
+
+% \section{Deployment}
+\section{Maintainability}
+
+\subsection{CI/CD}
+github action cicd
+
+\subsection{Docker Deployment}
+containerization, portability
+
+% -------------------------------------
 
 
-
-\section{General points}
+% \section{General points}
 
 These points apply to the whole dissertation, not just this chapter.
 
 
-
-\subsection{Figures}
+% \subsection{Figures}
 \emph{Always} refer to figures included, like Figure \ref{fig:relu}, in the body of the text. Include full, explanatory captions and make sure the figures look good on the page.
 You may include multiple figures in one float, as in Figure \ref{fig:synthetic}, using \texttt{subcaption}, which is enabled in the template.
 
@@ -241,7 +354,7 @@ You may include multiple figures in one float, as in Figure \ref{fig:synthetic},
 
 \clearpage
 
-\subsection{Equations}
+% \subsection{Equations}
 
 Equations should be typeset correctly and precisely. Make sure you get parenthesis sizing correct, and punctuate equations correctly 
 (the comma is important and goes \textit{inside} the equation block). Explain any symbols used clearly if not defined earlier. 
@@ -252,7 +365,7 @@ For example, we might define:
 \end{equation}    
 where $\hat{f}(\xi)$ is the Fourier transform of the time domain signal $f(x)$.
 
-\subsection{Algorithms}
+% \subsection{Algorithms}
 Algorithms can be set using \texttt{algorithm2e}, as in Algorithm \ref{alg:metropolis}.
 
 % NOTE: line ends are denoted by \; in algorithm2e
@@ -285,7 +398,7 @@ Algorithms can be set using \texttt{algorithm2e}, as in Algorithm \ref{alg:metro
 specialised for normal proposal distributions $q(x^\prime|x) = \mathcal{N}(x, \sigma^2)$. The symmetry of the normal distribution means the acceptance rule takes the simplified form.}\label{alg:metropolis}
 \end{algorithm}
 
-\subsection{Tables}
+% \subsection{Tables}
 
 If you need to include tables, like Table \ref{tab:operators}, use a tool like https://www.tablesgenerator.com/ to generate the table as it is
 extremely tedious otherwise. 
@@ -333,7 +446,7 @@ extremely tedious otherwise.
     % \bottomrule
     \end{tabular}
     \end{table}
-\subsection{Code}
+% \subsection{Code}
 
 Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible, as in Listing \ref{lst:callahan}.
 
@@ -375,7 +488,18 @@ Avoid putting large blocks of code in the report (more than a page in one block,
 \chapter{Evaluation} 
 How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
-\section{Guidance}
+\section{Unit Testing}
+\subsection{Syntactic Analysis}
+\subsection{Contextual Analysis}
+\subsection{Code Generation}
+
+\section{Performance Evaluation}
+\subsection{Compile Time}
+\subsection{Execution Time}
+
+\section{Program Memory Leaks (if pointer type finished)}
+
+% \section{Guidance}
 \begin{itemize}
     \item
         Ask specific questions that address the general problem.
@@ -389,7 +513,7 @@ How good is your solution? How well did you solve the general problem, and what 
         that your work is the most amazing product ever.
 \end{itemize}
 
-\section{Evidence}
+% \section{Evidence}
 Make sure you present your evidence well. Use appropriate visualisations, reporting techniques and statistical analysis, as appropriate.
 
 If you visualise, follow the basic rules, as illustrated in Figure \ref{fig:boxplot}:
@@ -420,7 +544,7 @@ See the file \texttt{guide\_to\_visualising.pdf} for further information and gui
 %==================================================================================================================================
 \chapter{Conclusion}    
 Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
-\section{Guidance}
+% \section{Guidance}
 \begin{itemize}
     \item
         Summarise briefly and fairly.
@@ -434,6 +558,18 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
         Indicate what future work could be done, but remember: \textbf{you
         won't get credit for things you haven't done}.
 \end{itemize}
+
+\section{Reflection}
+
+Reflect any decision made(frameworks , implementation approaches chosen)
+
+* whether good or bad
+* any promotions space
+* any optimisation space if attempt some other thing?
+
+Reflect for things
+
+\section{Future Work}
 
 %==================================================================================================================================
 %

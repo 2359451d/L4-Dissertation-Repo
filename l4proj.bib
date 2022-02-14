@@ -1,10 +1,57 @@
 
+@article{aShannonGlobalStackAllocationa,
+  title = {Global {{Stack Allocation}} \textendash},
+  author = {Shannon, Mark and Bailey, Chris},
+  pages = {8},
+  abstract = {Register allocation is a critical part of any compiler, yet register allocation for stack machines has received relatively little attention in the past. We present a framework for the analysis of register allocation methods for stack machines which has allowed us to analyse current methods. We have used this framework to design the first truly procedure-wide register allocation methods for stack machines. We have designed two such methods, both of which outperform current techniques.},
+  langid = {english},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\A5R6NS8C\\Shannon 和 Bailey - Global Stack Allocation –.pdf}
+}
+
+@article{BrunetonASMcodemanipulation2002,
+  title = {{{ASM}}: A Code Manipulation Tool to Implement Adaptable Systems},
+  author = {Bruneton, Eric and Lenglet, Romain and Coupaye, Thierry},
+  year = {2002},
+  pages = {12},
+  abstract = {ASM is a Java class manipulation tool designed to dynamically generate and manipulate Java classes, which are useful techniques to implement adaptable systems. ASM is based on a new approach, compared to equivalent existing tools, which consists in using the "visitor" design pattern without explicitly representing the visited tree with objects. This new approach gives much better performances than those of existing tools, for most of practical needs.},
+  langid = {english},
+  keywords = {asm},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\B26K2R89\\Bruneton et al. - ASM a code manipulation tool to implement adaptab.pdf}
+}
+
 @inproceedings{jones_how_2017,
   title = {How to {{Write}} a {{Great Research Paper}}},
   booktitle = {2017 {{Imperial College Computing Student Workshop}}, {{ICCSW}} 2017, {{September}} 26-27, 2017, {{London}}, {{UK}}},
   author = {Jones, Simon Peyton},
   year = {2017},
   pages = {1:1--1:1}
+}
+
+@article{KuleshovUsingASMframework2007,
+  title = {Using the {{ASM}} Framework to Implement Common {{Java}} Bytecode Transformation Patterns},
+  author = {Kuleshov, Eugene},
+  year = {2007},
+  pages = {7},
+  abstract = {Most AOP frameworks targeting the Java platform use a bytecode weaving approach as it is currently considered the most practical solution. It allows applying cross-cutting concerns to Java applications when source code is not available, is portable and works on existing JVMs, in comparison to VM-level AOP implementations.},
+  langid = {english},
+  keywords = {asm},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\G4LPYW7V\\Kuleshov - Using the ASM framework to implement common Java b.pdf}
+}
+
+@article{McCarthyDevelopingGeneralPurpose,
+  title = {Developing a {{General Purpose Compiler}}},
+  author = {McCarthy, Daniel},
+  pages = {60},
+  langid = {english},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\AYGLPRUK\\McCarthy - Developing a General Purpose Compiler.pdf}
+}
+
+@article{McCarthyDevelopingGeneralPurposea,
+  title = {Developing a {{General Purpose Compiler}}},
+  author = {McCarthy, Daniel},
+  pages = {60},
+  langid = {english},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\UMDQ3CGY\\McCarthy - Developing a General Purpose Compiler.pdf}
 }
 
 @incollection{orwell_politics_1968,
@@ -29,8 +76,8 @@
   year = {2006},
   pages = {8},
   abstract = {Register allocation is a critical part of any compiler, yet register allocation for stack machines has received relatively little attention in the past. We present a framework for the analysis of register allocation methods for stack machines which has allowed us to analyse current methods. We have used this framework to design the first truly procedure-wide register allocation methods for stack machines. We have designed two such methods, both of which outperform current techniques.},
-  file = {D\:\\study2022\\individualProject\\zotero\\storage\\NNQBIDNG\\Shannon 和 Bailey - Global Stack Allocation –.pdf},
-  language = {English}
+  langid = {english},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\NNQBIDNG\\Shannon 和 Bailey - Global Stack Allocation –.pdf}
 }
 
 @book{strunk_elements_2007,
@@ -38,6 +85,31 @@
   author = {Strunk, William and Whyte, EB},
   year = {2007},
   publisher = {{Penguin}}
+}
+
+@article{StudiesDesignImplementationSELF2000,
+  title = {The {{Design}} and {{Implementation}} of the {{SELF Compiler}}, an {{Optimizing Compiler}} for {{Object-Oriented Programming Languages}}},
+  author = {Studies, The and Hennessy, John and Linton, Mark},
+  year = {2000},
+  month = jan,
+  abstract = {Object-oriented programming languages promise to improve programmer productivity by supporting abstract data types, inheritance, and message passing directly within the language. Unfortunately, traditional implementations of object-oriented language features, particularly message passing, have been much slower than traditional implementations of their non-object-oriented counterparts: the fastest existing implementation of Smalltalk-80 runs at only a tenth the speed of an optimizing C implementation. The dearth of suitable implementation technology has forced most object-oriented languages to be designed as hybrids with traditional non-object-oriented languages, complicating the languages and making programs harder to extend and reuse. This dissertation describes a collection of implementation techniques that can improve the run-time performance of object-oriented languages, in hopes of reducing the need for hybrid languages and encouraging wider spread of purely object-oriented langu...},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\RZMQSJ7E\\Studies et al. - 2000 - The Design and Implementation of the SELF Compiler.pdf}
+}
+
+@inproceedings{VerguSpecializingmetainterpreterJIT2018a,
+  title = {Specializing a Meta-Interpreter: {{JIT}} Compilation of Dynsem Specifications on the Graal {{VM}}},
+  shorttitle = {Specializing a Meta-Interpreter},
+  booktitle = {Proceedings of the 15th {{International Conference}} on {{Managed Languages}} \& {{Runtimes}} - {{ManLang}} '18},
+  author = {Vergu, Vlad and Visser, Eelco},
+  year = {2018},
+  pages = {1--14},
+  publisher = {{ACM Press}},
+  address = {{Linz, Austria}},
+  doi = {10.1145/3237009.3237018},
+  abstract = {DynSem is a domain-specific language for concise specification of the dynamic semantics of programming languages, aimed at rapid experimentation and evolution of language designs. DynSem specifications can be executed to interpret programs in the language under development. To enable fast turnaround during language development, we have developed a meta-interpreter for DynSem specifications, which requires minimal processing of the specification. In addition to fast development time, we also aim to achieve fast run times for interpreted programs. In this paper we present the design of a meta-interpreter for DynSem and report on experiments with JIT compiling the application of the meta-interpreter on the Graal VM. By interpreting specifications directly, we have minimal compilation overhead. By specializing pattern matches, maintaining call-site dispatch chains and using native control-flow constructs we gain significant run-time performance. We evaluate the performance of the meta-interpreter when applied to the Tiger language specification running a set of common benchmark programs. Specialization enables the Graal VM to JIT compile the meta-interpreter giving speedups of up to factor 15 over running on the standard Oracle Java VM.},
+  isbn = {978-1-4503-6424-9},
+  langid = {english},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\Z4DRW7S8\\Vergu and Visser - 2018 - Specializing a meta-interpreter JIT compilation o.pdf}
 }
 
 @book{vonnegut_how_1980,
@@ -52,6 +124,16 @@
   author = {Williams, Joseph M and Bizup, Joseph},
   year = {2009},
   publisher = {{Pearson Longman}}
+}
+
+@article{WurthingerSelfoptimizingASTinterpreters,
+  title = {Self-Optimizing {{AST}} Interpreters},
+  author = {Wurthinger, Thomas and Wo{\ss}, Andreas and Stadler, Lukas and Simon, Doug and Wimmer, Christian and Duboscq, Gilles},
+  pages = {10},
+  abstract = {An abstract syntax tree (AST) interpreter is a simple and natural way to implement a programming language. However, it is also considered the slowest approach because of the high overhead of virtual method dispatch. Language implementers therefore define bytecodes to speed up interpretation, at the cost of introducing inflexible and hard to maintain bytecode formats. We present a novel approach to implementing AST interpreters in which the AST is modified during interpretation to incorporate type feedback. This tree rewriting is a general and powerful mechanism to optimize many constructs common in dynamic programming languages. Our system is implemented in JavaTM and uses the static typing and primitive data types of Java elegantly to avoid the cost of boxed representations of primitive values in dynamic programming languages.},
+  langid = {english},
+  keywords = {ast,bytecode},
+  file = {D\:\\study2022\\individualProject\\zotero\\storage\\MZIP4RK3\\Wurthinger et al. - Self-optimizing AST interpreters.pdf}
 }
 
 
